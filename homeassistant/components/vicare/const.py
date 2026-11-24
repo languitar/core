@@ -1,5 +1,12 @@
 """Constants for the ViCare integration."""
 
+from PyViCare.PyViCareUtils import (
+    PyViCareDeviceCommunicationError,
+    PyViCareInternalServerError,
+    PyViCareInvalidDataError,
+    PyViCareRateLimitError,
+)
+
 from homeassistant.const import Platform
 
 DOMAIN = "vicare"
@@ -33,6 +40,13 @@ VIESSMANN_DEVELOPER_PORTAL = "https://app.developer.viessmann-climatesolutions.c
 CONF_CIRCUIT = "circuit"
 
 DEFAULT_CACHE_DURATION = 60
+
+VICARE_API_ERRORS = (
+    PyViCareDeviceCommunicationError,
+    PyViCareInternalServerError,
+    PyViCareInvalidDataError,
+    PyViCareRateLimitError,
+)
 
 VICARE_BAR = "bar"
 VICARE_CELSIUS = "celsius"
